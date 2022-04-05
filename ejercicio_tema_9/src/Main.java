@@ -2,20 +2,26 @@ public class Main {
 
     public static void main(String[] args){
     Cliente cliente = new Cliente();
+    Trabajador trabajador = new Trabajador();
 
     cliente.edad = 35;
-        System.out.println("Tiene " + cliente.edad + " años" );
-
     cliente.nombre ="Pedro";
-        System.out.println("Su nombre es "+ cliente.nombre);
-
     cliente.telefono = 591131834;
-        System.out.println("Su numero de telefono es " + cliente.telefono);
+    cliente.credito = 550.70;
 
-    cliente.credito = 500;
-        System.out.println("Su credito es de " + cliente.credito);
+        System.out.println("Soy " + cliente.nombre + ", tengo " + cliente.edad + " años y mi telefono es " + cliente.telefono
+                + " y mi credito disponible es " + cliente.credito + "€");
 
-  
+    trabajador.edad = 27;
+    trabajador.nombre = "Juan";
+    trabajador.telefono = 591145678;
+    trabajador.salario = 2345.60;
+
+        System.out.println("Soy " + trabajador.nombre + ", tengo " + trabajador.edad + " años y mi telefono es " + trabajador.telefono
+                + " y mi salario es de " + trabajador.salario + "€");
+
+
+
     }
 
 
@@ -29,9 +35,9 @@ class Persona{
 }
 
 class Cliente extends Persona{
-    int credito;
+    double credito;
 }
 
 class Trabajador extends Persona{
-    int salario;
+    double salario;
 }
